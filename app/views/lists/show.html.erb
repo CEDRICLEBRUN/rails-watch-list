@@ -1,0 +1,16 @@
+<h1> <%= @list.name %></h1>
+
+<div class="card d-flex">
+  <% @list.bookmarks.each do |bookmark| %>
+    <div></div>
+      <%= image_tag bookmark.movie.poster_url, width: 200 %>
+      <%= bookmark.movie.title %> - <%= bookmark.movie.rating %>
+      <%= bookmark.movie.overview %>
+      <%= bookmark.comment %>
+      <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure ?"} %>
+    </div>
+  <% end %>
+</div>
+
+<i class="fas fa-ticket-alt" width: 10><%= link_to "Add a movie", new_list_bookmark_path(@list) %></i>
+<%= link_to "All lists", lists_path %>

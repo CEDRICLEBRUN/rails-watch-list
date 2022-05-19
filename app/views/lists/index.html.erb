@@ -1,0 +1,19 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/vectors/online-cinema-banner-elements-of-the-film-industry-popcorn-film-reel-vector-id1256986835?k=20&m=1256986835&s=170667a&w=0&h=aWgrqryBpyO_VmB_HlDHxk9m2V0mjfYwfWc5-q-n_ZE=);">
+  <div class="container">
+    <h1>Do you search a movie ?</strong>!</h1>
+    <p>Let's look at the lists below !</p>
+  </div>
+</div>
+
+<h1>All lists</h1>
+
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category">
+      <%= link_to list.name, list_path(list) %>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to "Add a list", new_list_path %>
