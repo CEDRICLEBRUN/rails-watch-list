@@ -3,3 +3,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+
+.card {
+  border-radius: 5px;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto;
+}
