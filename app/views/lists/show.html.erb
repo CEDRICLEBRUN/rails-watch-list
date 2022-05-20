@@ -1,5 +1,6 @@
 <div class="banner-show">
   <h1 > <%= @list.name %></h1>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
   <i class="fas fa-ticket-alt" width: 10><%= link_to "Add a movie", new_list_bookmark_path(@list) %></i>
 </div>
 
